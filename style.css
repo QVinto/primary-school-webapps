@@ -89,29 +89,6 @@ body {
   z-index: 1;
 }
 
-.app-header {
-  text-align: center;
-  background: var(--panel-bg);
-  border-radius: 24px;
-  padding: 32px 36px;
-  box-shadow: 0 25px 55px rgba(23, 32, 66, 0.25);
-  backdrop-filter: blur(10px);
-}
-
-.app-header h1 {
-  font-size: clamp(2.6rem, 5vw, 3.4rem);
-  margin: 0 0 12px;
-  color: var(--secondary-dark);
-  letter-spacing: 1px;
-}
-
-.app-header p {
-  margin: 0;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: var(--text-secondary);
-}
-
 .control-panel {
   display: flex;
   flex-wrap: wrap;
@@ -365,22 +342,6 @@ body {
   }
 }
 
-.hint-card {
-  padding: 14px 22px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 12px 26px rgba(23, 32, 66, 0.15);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1rem;
-  color: var(--text-secondary);
-}
-
-.hint-emoji {
-  font-size: 1.4rem;
-}
-
 @media (max-width: 640px) {
   .app-shell {
     padding: 32px 16px 80px;
@@ -401,7 +362,4 @@ body {
     justify-content: center;
   }
 
-  .hint-card {
-    text-align: center;
-  }
 }
