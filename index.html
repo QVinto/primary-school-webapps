@@ -3,18 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <title>Malá násobilka</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Fredoka:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="controls">
-    <button id="shuffle-btn" disabled>Generuj</button>
-    <button id="results-btn" disabled>Výsledky</button>
+  <div class="background-sparkles">
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
   </div>
-  <div id="playground">
-    <div id="inner-circle"></div>
-    <div id="outer-circle"></div>
-    <div id="center-number"></div>
-  </div>
+
+  <main class="app-shell">
+    <header class="app-header">
+      <h1>Malá násobilka</h1>
+      <p>
+        Vyber si číslo, roztoč kruh príkladov a klikom odhalíš, aký je výsledok.
+        Pripravené pre zvedavé deti aj rodičov, ktorí chcú trénovať spolu.
+      </p>
+    </header>
+
+    <section class="control-panel">
+      <form id="range-form" class="range-form">
+        <label for="range-min">Od
+          <input type="number" id="range-min" value="0" min="0" max="12" />
+        </label>
+        <label for="range-max">Do
+          <input type="number" id="range-max" value="12" min="0" max="12" />
+        </label>
+        <button type="submit" id="apply-range">Nastav interval</button>
+      </form>
+      <div class="action-buttons">
+        <button id="shuffle-btn" disabled>Roztoč príklady</button>
+        <button id="results-btn" disabled>Ukáž výsledky</button>
+      </div>
+    </section>
+
+    <section class="playground-wrap">
+      <div class="playground-glow"></div>
+      <div id="playground">
+        <div id="inner-circle"></div>
+        <div id="outer-circle"></div>
+        <div id="result-circle"></div>
+        <div id="center-number"></div>
+      </div>
+      <div class="hint-card">
+        <span class="hint-emoji">✨</span>
+        <span class="hint-text">Klikni na číslo, ktoré chceš násobiť, a potom trénuj príklady okolo kruhu.</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-0E3G7a5EvvIH8G1s99ZTSdKCbFf8gDuwZQ+Q0jrISFRCGDpa2BkLomPvKgJo0vvV3uF3p2Ww24rOZJ1vE2FL0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="script.js"></script>
 </body>
 </html>
