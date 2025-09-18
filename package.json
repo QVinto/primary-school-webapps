@@ -1,0 +1,8 @@
+{
+  "name": "primary-school-webapps",
+  "version": "1.0.0",
+  "description": "Simple web app for practicing multiplication table",
+  "scripts": {
+    "test": "echo 'No tests' && exit 0"
+  }
+}
